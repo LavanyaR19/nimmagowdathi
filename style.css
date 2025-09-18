@@ -1,0 +1,97 @@
+/* style.css - place in same folder as all html files */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f2f2f2;
+  color: #222;
+}
+
+/* Top navigation bar */
+.topnav {
+  background: #0b63d6; /* primary blue */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+}
+
+/* logo on left */
+.topnav .logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* menu on right */
+.topnav .menu a {
+  color: #fff;
+  margin-left: 18px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.topnav .menu a:hover,
+.topnav .menu a.active {
+  text-decoration: underline;
+}
+
+/* Page hero/title area under navbar */
+.hero {
+  background: #0f8bff;
+  color: white;
+  text-align: center;
+  padding: 28px 20px;
+}
+
+/* main container */
+.container {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/* job card styling */
+.job-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  padding: 22px;
+  margin-bottom: 18px;
+}
+.job-card h2 {
+  margin: 0 0 12px 0;
+  font-size: 22px;
+}
+.job-card p { margin: 6px 0; line-height: 1.4; }
+.job-meta { color:#333; font-weight:600; margin-bottom:10px; }
+
+/* apply button */
+.apply-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 16px;
+  background: #0b63d6;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.apply-btn:hover { background: #084fb0; }
+
+/* footer */
+.footer {
+  background: #222;
+  color: #ddd;
+  padding: 18px 10px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* responsive */
+@media (max-width: 720px) {
+  .topnav { flex-direction: column; gap: 8px; align-items: stretch; }
+  .topnav .menu { text-align: center; }
+  .topnav .menu a { margin: 8px; display:inline-block; }
+  .hero { padding: 20px 10px; }
+}

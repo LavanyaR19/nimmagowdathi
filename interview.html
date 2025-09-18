@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview Questions - Job4Software</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 90%;
+      margin: auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .tab {
+      background: #007bff;
+      color: white;
+      padding: 10px 20px;
+      margin: 0 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .tab:hover {
+      background: #0056b3;
+    }
+    .content {
+      display: none;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    }
+    .content.active {
+      display: block;
+    }
+    .question {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .answer {
+      margin-left: 20px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Interview Questions</h1>
+
+    <!-- Tabs for categories -->
+    <div class="tabs">
+      <div class="tab" onclick="showContent('java')">Java</div>
+      <div class="tab" onclick="showContent('python')">Python</div>
+      <div class="tab" onclick="showContent('frontend')">Frontend</div>
+    </div>
+
+    <!-- Java Questions -->
+    <div id="java" class="content active">
+      <div class="question">Q1: What is Java?</div>
+      <div class="answer">Java is a high-level, object-oriented programming language.</div>
+
+      <div class="question">Q2: Difference between JDK, JRE, and JVM?</div>
+      <div class="answer">JDK is Java Development Kit, JRE is Java Runtime Environment, JVM is Java Virtual Machine.</div>
+    </div>
+
+    <!-- Python Questions -->
+    <div id="python" class="content">
+      <div class="question">Q1: What is Python?</div>
+      <div class="answer">Python is an interpreted, high-level, general-purpose programming language.</div>
+
+      <div class="question">Q2: What are Python’s key features?</div>
+      <div class="answer">Simple syntax, dynamically typed, supports OOP, huge libraries.</div>
+    </div>
+
+    <!-- Frontend Questions -->
+    <div id="frontend" class="content">
+      <div class="question">Q1: What is HTML?</div>
+      <div class="answer">HTML stands for HyperText Markup Language, used to structure web pages.</div>
+
+      <div class="question">Q2: Difference between Flexbox and Grid?</div>
+      <div class="answer">Flexbox is one-dimensional, Grid is two-dimensional.</div>
+    </div>
+  </div>
+
+  <script>
+    function showContent(id) {
+      document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
