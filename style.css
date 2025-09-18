@@ -1,4 +1,4 @@
-/* style.css - place in same folder as all html files */
+/* General Reset */
 * { box-sizing: border-box; }
 body {
   margin: 0;
@@ -7,51 +7,119 @@ body {
   color: #222;
 }
 
-/* Top navigation bar */
-.topnav {
-  background: #0b63d6; /* primary blue */
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #007bff;
+  padding: 10px 20px;
+}
+
+.navbar .logo {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 12px 20px;
 }
 
-/* logo on left */
-.topnav .logo {
+.navbar .logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar h2 {
+  color: white;
+  margin: 0;
   font-size: 20px;
-  font-weight: 700;
-  color: #fff;
-  text-decoration: none;
 }
 
-/* menu on right */
-.topnav .menu a {
-  color: #fff;
-  margin-left: 18px;
-  text-decoration: none;
-  font-weight: 600;
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
-.topnav .menu a:hover,
-.topnav .menu a.active {
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar ul li a:hover {
   text-decoration: underline;
 }
 
-/* Page hero/title area under navbar */
+/* Hero Section */
 .hero {
-  background: #0f8bff;
-  color: white;
   text-align: center;
-  padding: 28px 20px;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: white;
 }
 
-/* main container */
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  background: white;
+  color: #007bff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Categories */
+.categories {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.category-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.category-cards .card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+.category-cards .card h3 {
+  margin-bottom: 10px;
+}
+
+.category-cards .card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Job Cards (for internships/fresher/experienced pages) */
 .container {
   max-width: 1000px;
   margin: 24px auto;
   padding: 0 16px;
 }
 
-/* job card styling */
 .job-card {
   background: #fff;
   border-radius: 8px;
@@ -59,14 +127,23 @@ body {
   padding: 22px;
   margin-bottom: 18px;
 }
+
 .job-card h2 {
   margin: 0 0 12px 0;
   font-size: 22px;
 }
-.job-card p { margin: 6px 0; line-height: 1.4; }
-.job-meta { color:#333; font-weight:600; margin-bottom:10px; }
 
-/* apply button */
+.job-card p {
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+.job-meta {
+  color:#333;
+  font-weight:600;
+  margin-bottom:10px;
+}
+
 .apply-btn {
   display: inline-block;
   margin-top: 12px;
@@ -77,9 +154,27 @@ body {
   text-decoration: none;
   font-weight: 600;
 }
+
 .apply-btn:hover { background: #084fb0; }
 
-/* footer */
+/* Featured Jobs on Home */
+.featured {
+  padding: 50px 20px;
+  background: #f8f9fa;
+}
+
+.featured h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.featured .job-card {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Footer */
 .footer {
   background: #222;
   color: #ddd;
@@ -88,10 +183,9 @@ body {
   margin-top: 30px;
 }
 
-/* responsive */
+/* Responsive */
 @media (max-width: 720px) {
-  .topnav { flex-direction: column; gap: 8px; align-items: stretch; }
-  .topnav .menu { text-align: center; }
-  .topnav .menu a { margin: 8px; display:inline-block; }
-  .hero { padding: 20px 10px; }
+  .navbar { flex-direction: column; gap: 8px; align-items: center; }
+  .navbar ul { flex-direction: column; gap: 10px; margin-top: 10px; }
+  .hero { padding: 40px 10px; }
 }
